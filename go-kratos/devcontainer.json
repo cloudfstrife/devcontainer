@@ -1,0 +1,15 @@
+{
+    "name": "kratos-dev",
+    "build": {
+      "dockerfile": "Dockerfile"
+    },
+    "postCreateCommand": "kratos --version",
+    "customizations": {
+      "vscode": {
+        "extensions": [
+          "golang.Go"
+        ]
+      }
+    }
+  }
+  
