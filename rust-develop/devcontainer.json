@@ -1,0 +1,20 @@
+{
+	"name": "rust-develop-testing",
+	"image": "rust-develop:1.80.1",
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+	"runArgs": [
+		"--name",
+		"rust-develop-testing"
+	],
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"rust-lang.rust-analyzer",
+				"redhat.vscode-yaml"
+			]
+		}
+	},
+	"postCreateCommand": "cargo --version"
+}
