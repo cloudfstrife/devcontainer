@@ -1,15 +1,20 @@
 {
-    "name": "kratos-dev",
-    "build": {
-      "dockerfile": "Dockerfile"
-    },
-    "postCreateCommand": "kratos --version",
-    "customizations": {
-      "vscode": {
-        "extensions": [
-          "golang.Go"
-        ]
-      }
-    }
-  }
-  
+	"name": "kratos-dev",
+	"image": "go-kratos:develop",
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+	"runArgs": [
+		"--name",
+		"testing"
+	],
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"golang.Go",
+				"redhat.vscode-yaml"
+			]
+		}
+	},
+	"postCreateCommand": "kratos --version"
+}
