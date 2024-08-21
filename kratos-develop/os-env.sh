@@ -13,4 +13,3 @@ apt-get autoclean
 # locale
 locale-gen zh_CN.UTF-8
 dpkg-reconfigure locales
-

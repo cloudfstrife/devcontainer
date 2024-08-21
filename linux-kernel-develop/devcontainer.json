@@ -1,12 +1,12 @@
 {
-	"name": "kernel-develop",
-	"image": "kernel-develop:develop",
+	"name": "linux-kernel-develop",
+	"image": "linux-kernel-develop:develop",
 	"build": {
 		"dockerfile": "Dockerfile"
 	},
 	"runArgs": [
 		"--name",
-		"kernel-develop"
+		"linux-kernel-develop"
 	],
 	"customizations": {
 		"vscode": {
