@@ -1,0 +1,20 @@
+{
+	"name": "kernel-develop",
+	"image": "kernel-develop:develop",
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+	"runArgs": [
+		"--name",
+		"kernel-develop"
+	],
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-vscode.cpptools",
+				"ms-vscode.makefile-tools"
+			]
+		}
+	},
+	"postCreateCommand": "uname -a"
+}
