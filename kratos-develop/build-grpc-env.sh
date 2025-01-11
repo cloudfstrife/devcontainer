@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 set -e
 set -u
@@ -11,7 +11,7 @@ GHPROXY_PREFIX=https://mirror.ghproxy.com
 
 TEMP_FOLDER=$(mktemp -d)
 
-function install_protoc_from_binary(){
+install_protoc_from_binary(){
 	PROTOC_DOWNLOAD_URL=$( curl -s https://api.github.com/repos/protocolbuffers/protobuf/releases/latest  | jq -r ".assets[].browser_download_url" | grep linux-x86_64 )
 	PROTOC_FILE_NAME=${PROTOC_DOWNLOAD_URL##*/}
 	DOWNLOAD_OUTPUT_FILE=${TEMP_FOLDER}/${PROTOC_FILE_NAME}
